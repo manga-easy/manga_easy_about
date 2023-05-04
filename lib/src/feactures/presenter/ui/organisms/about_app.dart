@@ -20,15 +20,15 @@ class AboutApp extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           SizedBox(
-            height: 215,
+            height: 218,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: ct.info.length,
               itemBuilder: (context, idx) {
                 final info = ct.info[idx];
                 return CardDescriptionNameWidget(
-                  textDescriptionCard: info.textDescription,
-                  paddingDescription: const EdgeInsets.only(top: 15, right: 16),
+                  textDescription: info.textDescription,
+                  paddingDescription: const EdgeInsets.only(top: 17, right: 16),
                   borderRadiusDescriptionCard: const BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),

@@ -31,15 +31,15 @@ class CardDescriptionNameWidget extends StatelessWidget {
       alignment: align ?? Alignment.topRight,
       children: [
         Padding(
-          padding: paddingDescription ?? const EdgeInsets.only(top: 15),
+          padding: paddingDescription ?? const EdgeInsets.only(top: 17),
           child: CardWidget(
             width: width,
             child: child,
           ),
         ),
         Container(
-          height: 32,
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          height: 34,
+          padding: const EdgeInsets.only(left: 16, right: 11),
           decoration: BoxDecoration(
             color: colorDescription ?? ThemeService.of.primaryColor,
             borderRadius: borderRadiusDescriptionCard ??
@@ -55,8 +55,10 @@ class CardDescriptionNameWidget extends StatelessWidget {
             children: [
               CoffeeText(
                 text: textDescription,
+                typography: CoffeeTypography.button,
               ),
-             iconDescription ?? const SizedBox.shrink(),
+              const SizedBox(width: 5),
+              iconDescription ?? const SizedBox.shrink(),
             ],
           ),
         ),
