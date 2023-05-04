@@ -7,18 +7,23 @@ class CardDescriptionNameWidget extends StatelessWidget {
   final Alignment? align;
   final Widget child;
   final double? width;
-  final String textDescriptionCard;
+  final String textDescription;
+  final Icon? iconDescription;
+  final Color? colorDescription;
   final EdgeInsets? paddingDescription;
 
   final BorderRadius? borderRadiusDescriptionCard;
-  const CardDescriptionNameWidget(
-      {super.key,
-      this.align,
-      required this.child,
-      required this.textDescriptionCard,
-      this.borderRadiusDescriptionCard,
-      this.width,
-      this.paddingDescription});
+  const CardDescriptionNameWidget({
+    super.key,
+    this.align,
+    required this.child,
+    required this.textDescription,
+    this.borderRadiusDescriptionCard,
+    this.width,
+    this.paddingDescription,
+    this.colorDescription,
+    this.iconDescription,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +41,7 @@ class CardDescriptionNameWidget extends StatelessWidget {
           height: 32,
           padding: const EdgeInsets.symmetric(horizontal: 16),
           decoration: BoxDecoration(
-            color: ThemeService.of.primaryColor,
+            color: colorDescription ?? ThemeService.of.primaryColor,
             borderRadius: borderRadiusDescriptionCard ??
                 const BorderRadius.only(
                   bottomLeft: Radius.circular(20),
@@ -49,8 +54,9 @@ class CardDescriptionNameWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CoffeeText(
-                text: textDescriptionCard,
+                text: textDescription,
               ),
+             iconDescription ?? const SizedBox.shrink(),
             ],
           ),
         ),
