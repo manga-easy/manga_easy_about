@@ -28,8 +28,8 @@ class AboutApp extends StatelessWidget {
                 final info = ct.info[idx];
                 return CardDescriptionNameWidget(
                   textDescriptionCard: info.textDescription,
+                  paddingDescription: const EdgeInsets.only(top: 15, right: 16),
                   borderRadiusDescriptionCard: const BorderRadius.only(
-                      bottomLeft: Radius.circular(0),
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),
                       bottomRight: Radius.circular(20)),

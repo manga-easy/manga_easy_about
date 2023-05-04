@@ -6,7 +6,9 @@ import 'package:manga_easy_themes/manga_easy_themes.dart';
 class CardDescriptionNameWidget extends StatelessWidget {
   final Alignment? align;
   final Widget child;
+  final double? width;
   final String textDescriptionCard;
+  final EdgeInsets? paddingDescription;
 
   final BorderRadius? borderRadiusDescriptionCard;
   const CardDescriptionNameWidget(
@@ -14,7 +16,9 @@ class CardDescriptionNameWidget extends StatelessWidget {
       this.align,
       required this.child,
       required this.textDescriptionCard,
-      this.borderRadiusDescriptionCard});
+      this.borderRadiusDescriptionCard,
+      this.width,
+      this.paddingDescription});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +26,9 @@ class CardDescriptionNameWidget extends StatelessWidget {
       alignment: align ?? Alignment.topRight,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 15, right: 16),
+          padding: paddingDescription ?? const EdgeInsets.only(top: 15),
           child: CardWidget(
+            width: width,
             child: child,
           ),
         ),

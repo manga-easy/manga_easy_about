@@ -3,15 +3,17 @@ import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class CardWidget extends StatelessWidget {
   final Widget child;
+  final double? width;
   const CardWidget({
     super.key,
     required this.child,
+    this.width,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width - 32,
+      width: width ?? MediaQuery.of(context).size.width - 32,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(7),
@@ -27,7 +29,7 @@ class CardWidget extends StatelessWidget {
       child: Column(
         children: [
           child,
-          Spacer(),
+          const Spacer(),
           Container(
             height: 1.5,
             alignment: Alignment.bottomCenter,
