@@ -2,6 +2,7 @@ import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/organisms/about_app.dart';
+import 'package:manga_easy_about/src/feactures/presenter/ui/organisms/team_app.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class AboutPage extends StatefulWidget {
@@ -17,6 +18,7 @@ class _AboutPageState extends State<AboutPage> {
   @override
   void initState() {
     ct.info;
+    ct.team;
     super.initState();
   }
 
@@ -36,6 +38,9 @@ class _AboutPageState extends State<AboutPage> {
           SliverToBoxAdapter(
             child: AboutApp(ct: ct),
           ),
+           SliverToBoxAdapter(
+            child: TeamApp(ct: ct),
+          )
         ],
       ),
     );
