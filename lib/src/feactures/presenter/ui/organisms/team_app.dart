@@ -83,7 +83,9 @@ class TeamApp extends StatelessWidget {
                       height: 190,
                       child: CardDescriptionNameWidget(
                         width: 150,
-                        textDescriptionCard: team.role.name,
+                        textDescription: team.role,
+                        iconDescription: Icon(team.icon),
+                        colorDescription: team.color,
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(16, 25, 16, 20),
                           child: CircleAvatar(
@@ -100,7 +102,6 @@ class TeamApp extends StatelessWidget {
                       text: team.name,
                       typography: CoffeeTypography.title,
                     ),
-                    CoffeeText(text: team.tagDiscord)
                   ],
                 );
               },
