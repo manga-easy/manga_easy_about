@@ -3,6 +3,7 @@ import 'package:manga_easy_about/src/feactures/domain/entities/team_entity.dart'
 import 'package:manga_easy_about/src/feactures/domain/entities/team_role_enum.dart';
 
 class AboutController {
+  List<String> categoryTeam = [];
   List<InformationEntity> info = [
     InformationEntity(
       textInformation:

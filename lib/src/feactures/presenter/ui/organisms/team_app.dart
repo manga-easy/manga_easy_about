@@ -2,6 +2,7 @@ import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/card_description_name_widget.dart';
+import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/category_select_team.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class TeamApp extends StatelessWidget {
@@ -21,56 +22,12 @@ class TeamApp extends StatelessWidget {
             typography: CoffeeTypography.title,
           ),
           const SizedBox(height: 20),
-          Row(
-            children: [
-              true
-                  ? Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 2),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: ThemeService.of.primaryColor,
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: ThemeService.of.backgroundIcon,
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          CoffeeText(
-                            text: 'Dev',
-                            color: ThemeService.of.primaryText,
-                          ),
-                          const SizedBox(width: 5),
-                          Icon(
-                            Icons.person,
-                            size: 14,
-                            color: ThemeService.of.primaryText,
-                          ),
-                        ],
-                      ),
-                    )
-                  : Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 2),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 10),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: ThemeService.of.backgroundIcon,
-                        ),
-                      ),
-                      child: const CoffeeText(
-                        text: 'Descenvolvedor',
-                        typography: CoffeeTypography.body,
-                      ),
-                    ),
-            ],
+          CategorySelectTeam(
+            categoryTeam: ct.categoryTeam,
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           SizedBox(
-            height: 250,
+            height: 210,
             child: ListView.builder(
               itemCount: ct.team.length,
               scrollDirection: Axis.horizontal,
@@ -80,16 +37,16 @@ class TeamApp extends StatelessWidget {
                   children: [
                     Container(
                       margin: const EdgeInsets.only(right: 16),
-                      height: 190,
+                      height: 164,
                       child: CardDescriptionNameWidget(
-                        width: 150,
+                        width: 120,
                         textDescription: team.role,
-                        iconDescription: Icon(team.icon),
+                        iconDescription: Icon(team.icon, size: 18),
                         colorDescription: team.color,
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(16, 25, 16, 20),
                           child: CircleAvatar(
-                            radius: 60,
+                            radius: 45,
                             backgroundImage: NetworkImage(
                               team.image,
                             ),
@@ -100,7 +57,7 @@ class TeamApp extends StatelessWidget {
                     const SizedBox(height: 5),
                     CoffeeText(
                       text: team.name,
-                      typography: CoffeeTypography.title,
+                      typography: CoffeeTypography.button,
                     ),
                   ],
                 );
