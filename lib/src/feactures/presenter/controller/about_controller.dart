@@ -63,63 +63,70 @@ class AboutController {
     TeamEntity(
       name: 'Elizabeth',
       tagDiscord: 'Elizabeth III#3163',
-      role: TeamRoleEnum.gerente,
+      role: TeamRoleEnum.manager,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Sky',
       tagDiscord: 'Skynoshine#8437',
-      role: TeamRoleEnum.gerente,
+      role: TeamRoleEnum.manager,
+      image:
+          'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
+    ),
+    TeamEntity(
+      name: 'Nietz',
+      tagDiscord: 'NietRedz#7480',
+      role: TeamRoleEnum.design,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Anyca',
       tagDiscord: 'Anyca#0001',
-      role: TeamRoleEnum.designer,
+      role: TeamRoleEnum.design,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Luiz',
       tagDiscord: 'Luiz Henrique#6295',
-      role: TeamRoleEnum.suporte,
+      role: TeamRoleEnum.support,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Koro',
       tagDiscord: 'Koro#1357',
-      role: TeamRoleEnum.suporte,
+      role: TeamRoleEnum.support,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Gabiru',
       tagDiscord: 'Gahbi#6494',
-      role: TeamRoleEnum.suporte,
+      role: TeamRoleEnum.support,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Darkzy',
       tagDiscord: '𝐷𝑎𝑟𝑘𝑧𝑦𓂀#2800',
-      role: TeamRoleEnum.suporte,
+      role: TeamRoleEnum.support,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Theus',
       tagDiscord: 'Theus#5212',
-      role: TeamRoleEnum.suporte,
+      role: TeamRoleEnum.support,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
     TeamEntity(
       name: 'Pato',
       tagDiscord: 'Ducktetive Based#6412',
-      role: TeamRoleEnum.suporte,
+      role: TeamRoleEnum.support,
       image:
           'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
     ),
