@@ -17,7 +17,7 @@ class TeamApp extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           const CoffeeText(
             text: 'Nossa equipe',
             typography: CoffeeTypography.title,
