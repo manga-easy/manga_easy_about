@@ -1,5 +1,6 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
+import 'package:manga_easy_about/src/core/routes/external_routes.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/organisms/about_app.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/organisms/more_information.dart';
@@ -44,8 +45,31 @@ class _AboutPageState extends State<AboutPage> {
           SliverToBoxAdapter(
             child: TeamApp(ct: ct),
           ),
-           SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: MoreInformation(ct: ct),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, ExternalRoutes.politic);
+                },
+                child: Row(
+                  children: [
+                    const CoffeeText(
+                      text: 'Politicas de Privacidade',
+                    ),
+                    const Spacer(),
+                    Icon(
+                      Icons.chevron_right_sharp,
+                      size: 22,
+                      color: ThemeService.of.backgroundIcon,
+                    )
+                  ],
+                ),
+              ),
+            ),
           ),
         ],
       ),
