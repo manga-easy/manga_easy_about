@@ -20,7 +20,7 @@ class AboutApp extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           SizedBox(
-            height: 218,
+            height: 185,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: ct.info.length,
