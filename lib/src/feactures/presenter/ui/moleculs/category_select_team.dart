@@ -22,7 +22,7 @@ class _CategorySelectTeamState extends State<CategorySelectTeam> {
         itemCount: TeamRoleEnum.values.length,
         itemBuilder: (context, index) {
           final team = TeamRoleEnum.values[index];
-          return InkWell(
+          return GestureDetector(
             onTap: () {
               setState(() {
                 widget.ct.selectTeam(team.text);
