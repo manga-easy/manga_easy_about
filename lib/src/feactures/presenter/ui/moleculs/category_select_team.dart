@@ -1,11 +1,12 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
 import 'package:manga_easy_about/src/feactures/domain/entities/team_role_enum.dart';
+import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
 import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class CategorySelectTeam extends StatefulWidget {
-  final List<String> categoryTeam;
-  const CategorySelectTeam({super.key, required this.categoryTeam});
+  final AboutController ct;
+  const CategorySelectTeam({super.key, required this.ct});
 
   @override
   State<CategorySelectTeam> createState() => _CategorySelectTeamState();
@@ -24,12 +25,10 @@ class _CategorySelectTeamState extends State<CategorySelectTeam> {
           return InkWell(
             onTap: () {
               setState(() {
-                widget.categoryTeam.contains(team.text)
-                    ? widget.categoryTeam.remove(team.text)
-                    : widget.categoryTeam.add(team.text);
+                widget.ct.selectTeam(team.text);
               });
             },
-            child: widget.categoryTeam.contains(team.text)
+            child: widget.ct.categoryTeam.contains(team.text)
                 ? Container(
                     margin: const EdgeInsets.symmetric(horizontal: 2),
                     padding: const EdgeInsets.symmetric(

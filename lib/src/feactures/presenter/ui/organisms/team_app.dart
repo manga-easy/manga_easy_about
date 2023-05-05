@@ -1,5 +1,6 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
+import 'package:manga_easy_about/src/feactures/domain/entities/team_entity.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/card_description_name_widget.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/category_select_team.dart';
@@ -23,7 +24,7 @@ class TeamApp extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           CategorySelectTeam(
-            categoryTeam: ct.categoryTeam,
+            ct: ct,
           ),
           const SizedBox(height: 20),
           SizedBox(
@@ -32,7 +33,11 @@ class TeamApp extends StatelessWidget {
               itemCount: ct.team.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, idx) {
-                var team = ct.team[idx];
+                final team = ct.team[idx];
+                if (!ct.categoryTeam.contains(team.role) &&
+                    ct.categoryTeam.isNotEmpty) {
+                  return const SizedBox.shrink();
+                }
                 return Column(
                   children: [
                     Container(
@@ -63,7 +68,7 @@ class TeamApp extends StatelessWidget {
                 );
               },
             ),
-          ),
+          )
         ],
       ),
     );
