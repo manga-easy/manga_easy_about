@@ -16,10 +16,6 @@ dependencies:
     git:
       url: https://github.com/manga-easy/manga_easy_themes.git
       ref: 1.0.2
-  manga_easy_sdk:
-    git:
-      url: https://github.com/manga-easy/manga_easy_sdk.git
-      ref: v1.2.1
   coffee_cup:
     git:
       url: https://github.com/manga-easy/manga_easy_coffee_cup.git
