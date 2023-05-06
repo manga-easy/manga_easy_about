@@ -62,12 +62,12 @@ class AboutController extends ChangeNotifier {
           'https://media.discordapp.net/attachments/1104184728535449631/1104200454054883459/iu.png?width=375&height=449',
     ),
     TeamEntity(
-      name: 'Skynoshaine',
+      name: 'Skynoshine',
       color: TeamRoleEnum.manager.color,
       icon: TeamRoleEnum.manager.icon,
       role: TeamRoleEnum.manager.text,
       image:
-          'https://media.discordapp.net/attachments/1104184728535449631/1104201206898888705/6bff9d15f454afd6dfffbabc0697cdd5.jpg?width=647&height=647',
+          'https://media.discordapp.net/attachments/1030715114158030868/1104466846184390767/Picsart_23-05-06_14-56-23-398.png?width=431&height=584',
     ),
     TeamEntity(
       name: 'Darkzy',
@@ -115,7 +115,7 @@ class AboutController extends ChangeNotifier {
       icon: TeamRoleEnum.support.icon,
       role: TeamRoleEnum.support.text,
       image:
-          'https://media.discordapp.net/attachments/882615192431771668/1078880185170006056/5d138386cb0ff237d0f65cd6a9905ab4.jpg?width=576&height=650',
+          'https://media.discordapp.net/attachments/1104199496356868096/1104463338009809008/IMG_20230402_222121_624.jpg?width=584&height=584',
     ),
     TeamEntity(
       name: 'Anyca',
