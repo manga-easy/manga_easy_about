@@ -55,6 +55,7 @@ class CardDescriptionNameWidget extends StatelessWidget {
             children: [
               CoffeeText(
                 text: textDescription,
+                color: Colors.white,
                 typography: CoffeeTypography.button,
               ),
               const SizedBox(width: 5),

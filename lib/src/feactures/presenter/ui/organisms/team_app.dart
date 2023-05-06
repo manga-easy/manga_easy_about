@@ -1,10 +1,8 @@
 import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_easy_about/src/feactures/domain/entities/team_entity.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/card_description_name_widget.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/category_select_team.dart';
-import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class TeamApp extends StatelessWidget {
   final AboutController ct;
@@ -46,14 +44,22 @@ class TeamApp extends StatelessWidget {
                       child: CardDescriptionNameWidget(
                         width: 120,
                         textDescription: team.role,
-                        iconDescription: Icon(team.icon, size: 18),
+                        iconDescription: Icon(
+                          team.icon,
+                          size: 18,
+                        color: Colors.white,
+                        ),
                         colorDescription: team.color,
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(16, 25, 16, 20),
+                          padding: const EdgeInsets.fromLTRB(14, 25, 14, 20),
                           child: CircleAvatar(
+                            backgroundColor: team.color,
                             radius: 45,
-                            backgroundImage: NetworkImage(
-                              team.image,
+                            child: CircleAvatar(
+                              radius: 42,
+                              backgroundImage: NetworkImage(
+                                team.image,
+                              ),
                             ),
                           ),
                         ),

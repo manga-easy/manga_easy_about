@@ -2,7 +2,6 @@ import 'package:coffee_cup/coffe_cup.dart';
 import 'package:flutter/material.dart';
 import 'package:manga_easy_about/src/feactures/domain/entities/team_role_enum.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
-import 'package:manga_easy_themes/manga_easy_themes.dart';
 
 class CategorySelectTeam extends StatefulWidget {
   final AboutController ct;
@@ -42,13 +41,14 @@ class _CategorySelectTeamState extends State<CategorySelectTeam> {
                       children: [
                         CoffeeText(
                           text: team.text,
+                          color: Colors.white,
                           typography: CoffeeTypography.button,
                         ),
                         const SizedBox(width: 5),
                         Icon(
                           team.icon,
                           size: 18,
-                          color: ThemeService.of.primaryText,
+                          color: Colors.white,
                         ),
                       ],
                     ),
