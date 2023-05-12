@@ -35,7 +35,9 @@ class _AboutPageState extends State<AboutPage> {
             backgroundColor: Colors.transparent,
             leading: IconButton(
               color: ThemeService.of.backgroundIcon,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: const Icon(Icons.arrow_back_ios_rounded),
             ),
           ),
