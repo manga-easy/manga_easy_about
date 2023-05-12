@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:manga_easy_about/src/feactures/domain/entities/team_role_enum.dart';
 
 class TeamEntity {
   final String name;

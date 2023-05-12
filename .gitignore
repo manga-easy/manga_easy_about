@@ -31,3 +31,4 @@ build/
 
 .metadata
 pubspec.lock
+.flutter-plugins-dependencies
