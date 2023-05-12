@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:manga_easy_about/manga_easy_about.dart';
+import 'package:manga_easy_about/src/feactures/presenter/ui/pages/about_page.dart';
 import 'package:manga_easy_routes/manga_easy_routes.dart';
 
 class AboutMicroApp extends MicroApp {
