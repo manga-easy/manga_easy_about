@@ -62,12 +62,28 @@ class AboutController extends ChangeNotifier {
           'https://media.discordapp.net/attachments/1104184728535449631/1104200454054883459/iu.png?width=375&height=449',
     ),
     TeamEntity(
+      name: 'Luiz Henrique',
+      color: TeamRoleEnum.manager.color,
+      icon: TeamRoleEnum.manager.icon,
+      role: TeamRoleEnum.manager.text,
+      image:
+          'https://media.discordapp.net/attachments/1104184728535449631/1104205804850131034/images_-_2022-02-17T223950.637.jpeg?width=665&height=373',
+    ),
+    TeamEntity(
       name: 'Skynoshine',
       color: TeamRoleEnum.manager.color,
       icon: TeamRoleEnum.manager.icon,
       role: TeamRoleEnum.manager.text,
       image:
           'https://media.discordapp.net/attachments/1030715114158030868/1104466846184390767/Picsart_23-05-06_14-56-23-398.png?width=431&height=584',
+    ),
+    TeamEntity(
+      name: 'Thiago',
+      color: TeamRoleEnum.manager.color,
+      icon: TeamRoleEnum.manager.icon,
+      role: TeamRoleEnum.manager.text,
+      image:
+          'https://media.discordapp.net/attachments/1104199496356868096/1104463338009809008/IMG_20230402_222121_624.jpg?width=584&height=584',
     ),
     TeamEntity(
       name: 'Darkzy',
@@ -86,14 +102,6 @@ class AboutController extends ChangeNotifier {
           'https://media.discordapp.net/attachments/1104184728535449631/1104200150529884190/20210626090221_2d701.jpeg?width=359&height=359',
     ),
     TeamEntity(
-      name: 'Luiz Henrique',
-      color: TeamRoleEnum.support.color,
-      icon: TeamRoleEnum.support.icon,
-      role: TeamRoleEnum.support.text,
-      image:
-          'https://media.discordapp.net/attachments/1104184728535449631/1104205804850131034/images_-_2022-02-17T223950.637.jpeg?width=665&height=373',
-    ),
-    TeamEntity(
       name: 'Pato',
       color: TeamRoleEnum.support.color,
       icon: TeamRoleEnum.support.icon,
@@ -108,14 +116,6 @@ class AboutController extends ChangeNotifier {
       role: TeamRoleEnum.support.text,
       image:
           'https://media.discordapp.net/attachments/1104198872449953844/1104200718832910356/IMG_20230505_211847.jpg?width=584&height=584',
-    ),
-    TeamEntity(
-      name: 'Thiago',
-      color: TeamRoleEnum.support.color,
-      icon: TeamRoleEnum.support.icon,
-      role: TeamRoleEnum.support.text,
-      image:
-          'https://media.discordapp.net/attachments/1104199496356868096/1104463338009809008/IMG_20230402_222121_624.jpg?width=584&height=584',
     ),
     TeamEntity(
       name: 'Anyca',

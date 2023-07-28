@@ -7,7 +7,7 @@ enum TeamRoleEnum {
     color: Color.fromARGB(255, 218, 184, 13),
   ),
   manager(
-    text: 'Gerente',
+    text: 'Admin',
     icon: Icons.person,
     color: Color(0xffba003e),
   ),
