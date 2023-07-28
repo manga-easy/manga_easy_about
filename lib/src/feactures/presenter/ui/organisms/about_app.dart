@@ -1,7 +1,7 @@
-import 'package:coffee_cup/features/text/coffee_text.dart';
+import 'package:coffee_cup/coffe_cup.dart';
+import 'package:coffee_cup/features/container/styles/description_style.dart';
 import 'package:flutter/material.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
-import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/card_description_name_widget.dart';
 
 class AboutApp extends StatelessWidget {
   final AboutController ct;
@@ -20,25 +20,26 @@ class AboutApp extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           SizedBox(
-            height: 185,
+            height: 180,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: ct.info.length,
               itemBuilder: (context, idx) {
                 final info = ct.info[idx];
-                return CardDescriptionNameWidget(
-                  textDescription: info.textDescription,
-                  paddingDescription: const EdgeInsets.only(top: 17, right: 16),
-                  borderRadiusDescriptionCard: const BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                      bottomRight: Radius.circular(20)),
-                  align: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 25, 16, 20),
-                    child: CoffeeText(
-                      text: info.textInformation,
-                    ),
+                return CoffeeContainer(
+                  margin: const EdgeInsets.only(right: 10),
+                  padding: const EdgeInsets.fromLTRB(16, 22, 16, 16),
+                  sizeWidth: MediaQuery.of(context).size.width - 32,
+                  descriptionStyle: DescriptionStyle(
+                    textCard: info.textDescription,
+                    borderRadiusCard: const BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
+                    align: Alignment.topLeft,
+                  ),
+                  child: CoffeeText(
+                    text: info.textInformation,
                   ),
                 );
               },

@@ -1,7 +1,7 @@
 import 'package:coffee_cup/coffe_cup.dart';
+import 'package:coffee_cup/features/container/styles/description_style.dart';
 import 'package:flutter/material.dart';
 import 'package:manga_easy_about/src/feactures/presenter/controller/about_controller.dart';
-import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/card_description_name_widget.dart';
 import 'package:manga_easy_about/src/feactures/presenter/ui/moleculs/category_select_team.dart';
 
 class TeamApp extends StatelessWidget {
@@ -38,29 +38,23 @@ class TeamApp extends StatelessWidget {
                 }
                 return Column(
                   children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 16),
-                      height: 164,
-                      child: CardDescriptionNameWidget(
-                        width: 120,
-                        textDescription: team.role,
-                        iconDescription: Icon(
-                          team.icon,
-                          size: 18,
-                        color: Colors.white,
-                        ),
-                        colorDescription: team.color,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(14, 25, 14, 20),
-                          child: CircleAvatar(
-                            backgroundColor: team.color,
-                            radius: 45,
-                            child: CircleAvatar(
-                              radius: 42,
-                              backgroundImage: NetworkImage(
-                                team.image,
-                              ),
-                            ),
+                    CoffeeContainer(
+                      sizeWidth: 125,
+                      margin: const EdgeInsets.only(right: 10),
+                      descriptionStyle: DescriptionStyle(
+                        textCard: team.role,
+                        iconCard: team.icon,
+                        colorCard: team.color,
+                        colorTextCard: Colors.white,
+                      ),
+                      padding: const EdgeInsets.fromLTRB(10, 22, 10, 20),
+                      child: CircleAvatar(
+                        backgroundColor: team.color,
+                        radius: 45,
+                        child: CircleAvatar(
+                          radius: 42,
+                          backgroundImage: NetworkImage(
+                            team.image,
                           ),
                         ),
                       ),
